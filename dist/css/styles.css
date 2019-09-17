@@ -5,7 +5,11 @@
     outline: none;
 }
 
-#drop-area {
+p {
+    margin-top: 0;
+}
+
+.drop-area {
     width: 640px;
     margin: 100px auto;
     padding: 40px;
@@ -14,27 +18,12 @@
     border-radius: 20px;
 }
 
-#drop-area.highlight {
+.drop-area.js-highlight {
     border-color: purple;
 }
 
-p {
-    margin-top: 0;
-}
+.drop-area__previews {
 
-.my-form {
-    margin-bottom: 10px;
-}
-
-#gallery {
-    margin-top: 10px;
-}
-
-#gallery img {
-    width: 150px;
-    margin-bottom: 10px;
-    margin-right: 10px;
-    vertical-align: middle;
 }
 
 .button {
@@ -58,23 +47,26 @@ p {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    width: 640px;
+    width: 100%;
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    min-height: 200px;
-    margin: auto;
-    padding: 40px 20px 20px 40px;
-    border: 2px solid #ccc;
+    margin: 100px -10px 0;
+    padding: 20px 0 0;
+    /*border: 2px solid #ccc;*/
     border-radius: 20px;
     list-style: none;
 }
 
+.previews_hide {
+    display: none;
+}
+
 .previews:before {
-    content: 'Ваши изображения:';
+    content: 'Загруженные изображения:';
     position: absolute;
-    top: -35px;
-    left: 20px;
+    top: -15px;
+    left: 10px;
     display: block;
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -131,14 +123,4 @@ p {
     border: 1px solid #aaa;
 }
 
-#submitBtn {
-    background-color: #ffffff;
-    font-size: inherit;
-    margin-left: 15px;
-}
-
-#submitBtn:disabled {
-    opacity: 0.5;
-    cursor: inherit;
-}
 /*# sourceMappingURL=styles.css.map */

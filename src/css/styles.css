@@ -20,8 +20,8 @@ p {
     border-color: purple;
 }
 
-.drop-area__form {
-    margin-bottom: 10px;
+.drop-area__previews {
+
 }
 
 .button {
@@ -45,21 +45,24 @@ p {
     position: relative;
     display: flex;
     flex-wrap: wrap;
-    width: 640px;
+    width: 100%;
     height: fit-content;
-    min-height: 200px;
-    margin: auto;
-    padding: 40px 20px 20px 40px;
-    border: 2px solid #ccc;
+    margin: 100px -10px 0;
+    padding: 20px 0 0;
+    /*border: 2px solid #ccc;*/
     border-radius: 20px;
     list-style: none;
 }
 
+.previews_hide {
+    display: none;
+}
+
 .previews:before {
-    content: 'Ваши изображения:';
+    content: 'Загруженные изображения:';
     position: absolute;
-    top: -35px;
-    left: 20px;
+    top: -15px;
+    left: 10px;
     display: block;
     width: fit-content;
     height: fit-content;
@@ -109,15 +112,4 @@ p {
     background-color: #ffffff;
     border-radius: 100%;
     border: 1px solid #aaa;
-}
-
-#submitBtn {
-    background-color: #ffffff;
-    font-size: inherit;
-    margin-left: 15px;
-}
-
-#submitBtn:disabled {
-    opacity: 0.5;
-    cursor: inherit;
 }

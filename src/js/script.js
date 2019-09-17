@@ -1,6 +1,6 @@
 let dropArea = document.getElementById('drop-area');
 let previewList = document.querySelector('ul.previews');
-const submitBtn = document.querySelector('#submitBtn');
+const validExtensions = ["jpg", "jpeg", "png", "webp", "gif"];
 
 function preventDefaults (e) {
     e.preventDefault();
@@ -8,19 +8,11 @@ function preventDefaults (e) {
 }
 
 function highlight(e) {
-    dropArea.classList.add('highlight')
+    dropArea.classList.add('js-highlight')
 }
 
 function unhighlight(e) {
     dropArea.classList.remove('js-highlight')
-}
-
-function toggleSendDisable(btn) {
-    if (previewList.childNodes.length > 1) {
-        btn.removeAttribute('disabled');
-    } else {
-        btn.setAttribute('disabled', 'disabled');
-    }
 }
 
 function uploadFile(file) {
@@ -35,18 +27,20 @@ function uploadFile(file) {
 //         .then(() => { /* Готово. Информируем пользователя */ })
 //         .catch(() => { /* Ошибка. Информируем пользователя */ })
 //     readURL(file);
-    createLi(file);
-    toggleSendDisable(submitBtn)
+    let fileType = file.type.split('/');
+    if (validExtensions.indexOf(fileType[fileType.length -1]) !== -1) {
+        createLi(file);
+    }
 }
 
 function handleDrop(e) {
     let dt = e.dataTransfer;
     let files = dt.files;
-    handleFiles(files)
+    handleFiles(files);
 }
 
 function handleFiles(files) {
-    ([...files]).forEach(uploadFile)
+    ([...files]).forEach(uploadFile);
 }
 
 function createLi(file) {
@@ -65,9 +59,8 @@ function createLi(file) {
 
     const deleteBtn = img.parentNode.parentNode.querySelector('.delete-btn');
     deleteBtn.addEventListener('click', function (e) {
-        this.preventDefaults(e);
+        preventDefaults(e);
         deleteBtn.parentElement.parentElement.removeChild(deleteBtn.parentNode);
-        toggleSendDisable(submitBtn);
     });
 
     reader.readAsDataURL(file);
