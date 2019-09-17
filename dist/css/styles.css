@@ -1,0 +1,144 @@
+
+
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+#drop-area {
+    width: 640px;
+    margin: 100px auto;
+    padding: 40px;
+    font-family: sans-serif;
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+}
+
+#drop-area.highlight {
+    border-color: purple;
+}
+
+p {
+    margin-top: 0;
+}
+
+.my-form {
+    margin-bottom: 10px;
+}
+
+#gallery {
+    margin-top: 10px;
+}
+
+#gallery img {
+    width: 150px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px;
+    background: #ccc;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.button:hover {
+    background: #ddd;
+}
+
+#fileElem {
+    display: none;
+}
+
+.previews {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 640px;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    min-height: 200px;
+    margin: auto;
+    padding: 40px 20px 20px 40px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    list-style: none;
+}
+
+.previews:before {
+    content: 'Ваши изображения:';
+    position: absolute;
+    top: -35px;
+    left: 20px;
+    display: block;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-family: sans-serif;
+}
+
+.previews__item {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    text-overflow: ellipsis;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin: 0 10px 20px;
+}
+
+.previews__img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.previews__img img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.previews__delete-btn {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+}
+
+.delete-btn {
+    width: 25px;
+    height: 25px;
+    color: #aaa;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 700;
+    background-color: #ffffff;
+    border-radius: 100%;
+    border: 1px solid #aaa;
+}
+
+#submitBtn {
+    background-color: #ffffff;
+    font-size: inherit;
+    margin-left: 15px;
+}
+
+#submitBtn:disabled {
+    opacity: 0.5;
+    cursor: inherit;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drag'n'drop example</title>
+    <link rel="stylesheet" href="src/css/styles.css">
+    <!--DRAGGABLE lib-->
+    <!-- Entire bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/draggable.bundle.js"></script>
+    <!-- legacy bundle for older browsers (IE11) -->
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/draggable.bundle.legacy.js"></script>
+    <!-- Draggable only -->
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/draggable.js"></script>
+    <!-- Sortable only -->
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/sortable.js"></script>
+    <!-- Droppable only -->
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/droppable.js"></script>
+    <!-- Swappable only -->
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/swappable.js"></script>
+    <!-- Plugins only -->
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.8/lib/plugins.js"></script>
+</head>
+
+<body>
+<div id="drop-area" class="drop-area">
+    <form class="drop-area__form">
+        <p>Загрузите изображения с помощью диалога выбора файлов или перетащив нужные изображения в выделенную область</p>
+        <label class="button">Выбрать изображения
+            <input type="file" id="fileElem" multiple accept=".jpg, .jpeg, .png, .webp, .gif" onchange="handleFiles(this.files)">
+        </label>
+        <button type="submit" id="submitBtn" class="button" disabled>Отправить</button>
+    </form>
+</div>
+
+<ul class="previews"></ul>
+
+<script src="src/js/script.js"></script>
+</body>
+</html>
