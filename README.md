@@ -10,4 +10,5 @@ small local drag'n'drop example
 
 
 `gulp` - собирает всё из `src`, бандлит в `dist`
+
 `gulp watch` - собирает, бандлит и запускает BrowserSync на `localhost:3000`
